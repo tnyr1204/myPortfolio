@@ -8,8 +8,7 @@ $(function() {
         if ($(this).scrollTop() > 80) {
             //---- 画面を80pxスクロールしたら、ボタンを表示する
             topBtn.fadeIn();
-        }
-        else {
+        } else {
             //---- 画面が80pxより上なら、ボタンを表示しない
             topBtn.fadeOut();
         }
@@ -25,4 +24,20 @@ $(function() {
         return false;
     });
 
+
+
+    // 上下どちらにスクロールしているのかを判別して，headerを隠すまたは消去
+    var startPos = 0,
+        winScrollTop = 0;
+    $(window).on('scroll', function() {
+        winScrollTop = $(this).scrollTop();
+        if (winScrollTop >= startPos) {
+            if (winScrollTop >= 200) {
+                $('.header-bar').addClass('hide');
+            }
+        } else {
+            $('.header-bar').removeClass('hide');
+        }
+        startPos = winScrollTop;
+    });
 });
