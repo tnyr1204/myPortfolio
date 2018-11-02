@@ -1,7 +1,8 @@
 @charset "utf-8";
 /* 上下左右全部のデフォルトのmarginを0にする */
-html,body{
-    margin:0px;
+
+html, body {
+    margin: 0px;
 }
 
 html {
@@ -47,11 +48,11 @@ html {
 }
 
 #about main {
-    font-family: "Hiragino Sans","ヒラギノ角ゴシック";
+    font-family: "Hiragino Sans", "ヒラギノ角ゴシック";
     font-weight: 300;
     color: #000000;
     font-size: 14px;
-    margin-top: 50px;
+    margin-top: 70px;
     margin-left: 25%;
     margin-right: 25%;
     margin-bottom: 250px;
@@ -90,7 +91,7 @@ html {
 }
 
 #index h2 {
-    font-family: "Hiragino Sans","ヒラギノ角ゴシック";
+    font-family: "Hiragino Sans", "ヒラギノ角ゴシック";
     font-weight: 200;
     color: #000000;
     font-size: 16px;
@@ -126,7 +127,7 @@ h3 {
     height: 23px;
 }
 
-.profile-image img{
+.profile-image img {
     display: block;
     margin: 30px auto;
     max-width: 250px;
@@ -143,6 +144,7 @@ h3 {
 }
 
 /* float要素中央寄せ用 */
+
 .name-center {
     width: 200px;
     margin: 0px auto;
@@ -154,7 +156,7 @@ h3 {
     height: auto;
 }
 
-.facebook img{
+.facebook img {
     width: 40px;
     height: auto;
 }
@@ -164,8 +166,75 @@ h3 {
 }
 
 .profile-text {
-    margin-top: 10px;
+    margin-top: 30px;
     margin-bottom: 70px;
+}
+
+.skill-icon {
+    text-align: center;
+    margin: 50px auto 100px auto;
+}
+
+.c-icon img {
+    width: 100px;
+    height: auto;
+}
+
+.c2-icon img {
+    width: 100px;
+    height: auto;
+}
+
+.html-icon img {
+    width: 95px;
+    height: auto;
+    margin: -20px;
+}
+
+.css-icon img {
+    width: 150px;
+    height: auto;
+    margin: -40px;
+}
+
+.photoshop-icon img {
+    width: 100px;
+    height: auto;
+    margin: -20px;
+}
+
+.python-icon img {
+    width: 110px;
+    height: auto;
+}
+
+.java-icon img {
+    width: 80px;
+    height: auto;
+}
+
+#pageTop {
+    position: fixed;
+    bottom: 80px;
+    right: 80px;
+}
+
+#pageTop i {
+    padding-top: 6px
+}
+
+#pageTop a {
+    display: inline-block;
+    z-index: 5;
+    width: 50px;
+    height: 50px;
+    background-image: url(../images/pagetop.jpg);
+    background-position: cover;
+}
+
+#pageTop a:hover {
+    text-decoration: none;
+    opacity: 0.7;
 }
 
 .global-nav {
@@ -203,6 +272,7 @@ a {
 }
 
 /* 中央から左右に下線を引くアニメーション */
+
 a::before, a::after {
     bottom: 0;
     content: "";
@@ -221,7 +291,7 @@ a::before, a::after {
     border-bottom: solid 6px #00b3aa;
 }
 
-.about::before, .about::after{
+.about::before, .about::after {
     border-bottom: solid 6px #ffff00;
 }
 
