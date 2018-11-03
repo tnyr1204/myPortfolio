@@ -27,17 +27,23 @@ $(function() {
 
 
     // 上下どちらにスクロールしているのかを判別して，headerを隠すまたは消去
-    // var startPos = 0,
-    //     winScrollTop = 0;
-    // $(window).on('scroll', function() {
-    //     winScrollTop = $(this).scrollTop();
-    //     if (winScrollTop >= startPos) {
-    //         if (winScrollTop >= 200) {
-    //             $('.header-bar').addClass('hide');
-    //         }
-    //     } else {
-    //         $('.header-bar').removeClass('hide');
-    //     }
-    //     startPos = winScrollTop;
-    // });
+    var startPos = 0,
+        winScrollTop = 0;
+
+    $(window).on('scroll', function() {
+
+        winScrollTop = $(this).scrollTop();
+
+        if (winScrollTop >= startPos) {
+
+            if (winScrollTop >= 200) {
+                $('.header-bar').addClass('hide');
+            }
+
+        } else {
+            $('.header-bar').removeClass('hide');
+        }
+        
+        startPos = winScrollTop;
+    });
 });
