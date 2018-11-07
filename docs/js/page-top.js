@@ -5,6 +5,7 @@ $(function() {
 
     //ボタンの表示設定
     $(window).scroll(function() {
+
         if ($(this).scrollTop() > 80) {
             //---- 画面を80pxスクロールしたら、ボタンを表示する
             topBtn.fadeIn();
@@ -12,6 +13,7 @@ $(function() {
             //---- 画面が80pxより上なら、ボタンを表示しない
             topBtn.fadeOut();
         }
+        
     });
 
 
@@ -43,7 +45,7 @@ $(function() {
         } else {
             $('.header-bar').removeClass('hide');
         }
-        
+
         startPos = winScrollTop;
     });
 });
