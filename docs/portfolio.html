@@ -8,6 +8,7 @@
     <link href="./images/favicon.ico" rel="shortcut icon">
     <script type="text/javascript" src="./js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="./js/page-top.js"></script>
+    <script type="text/javascript" src="./js/modal.js"></script>
 </head>
 
 <body id="portfolio">
@@ -34,28 +35,85 @@
         </h1>
         <table class="thumbnail">
             <tr class="portfolio-image">
-                <td class="jphacks-image">
-                    <a href="portfolio/jphacks2018.html">
+                <td class="thumbnail-image">
+                    <a data-target="modal1" class="modal-open">
                         <figure class="hover-parent">
-                            <img src="./images/superdry200.jpg" alt="Superdryサムネイル" class="superdry-sc">
+                            <img src="./images/superdry210.jpg" alt="Superdryサムネイル" class="superdry-sc">
                             <figcaption class="hover-mask">
-                                JPHACKS 2018<br>
-                                部屋干し支援アプリ
+                                JPHACKS 2018<br> 部屋干し支援アプリ
                             </figcaption>
                         </figure>
                     </a>
                 </td>
-                <td class="logo-image">
-                    <a href="portfolio/YTlogo.html">
+                <td class="thumbnail-image">
+                    <a data-target="modal2" class="modal-open">
                         <figure class="hover-parent">
-                            <img src="./images/YT_logo250.jpg" alt="YTロゴサムネイル" class="superdry-sc">
-                            <figcaption style="padding-left: 75px;",  class="hover-mask">
+                            <img src="./images/YT_logo220.jpg" alt="YTロゴサムネイル" class="superdry-sc">
+                            <figcaption style="padding-left: 65px;", class="hover-mask">
                                 自分のロゴ
                             </figcaption>
                         </figure>
                     </a>
                 </td>
+                <td class="thumbnail-image">
+                    <a data-target="modal3" class="modal-open">
+                        <figure class="hover-parent">
+                            <img src="./images/askul_sc250.jpg" alt="アスクルインターンサムネイル" class="superdry-sc">
+                            <figcaption class="hover-mask">
+                                アスクルインターンシップ
+                            </figcaption>
+                        </figure>
+                    </a>
+                </td>
             </tr>
+
+            <!--Modal contents-->
+            <div id="modal1" class="modal-content">
+                <img src="./images/superdry250.jpg">
+                <div class="modal-text">
+                    <h2>
+                        JPHACKS 2018 部屋干し支援アプリ
+                    </h2>
+                    <p>
+                        　学生のみが参加できるハッカソン「JPHACKS2018」にデザイナーとして参加したときの成果物です。私達のチームは部屋干し時、長い乾燥時間による「生乾き臭」に着目し、ハンガーに電極や温湿度センサなどを取り付けて洗濯物の乾き具合を測定、機械学習を用いて乾くまでの時間推定や、乾燥中にエアコンのON/OFFを自動制御することで、乾燥時間を短縮しつつ電気代を抑えるシステム「極度乾燥（するやで）」を開発しました。私はIoTハンガーから得た情報をユーザに提示するWebアプリのUIデザイン設計とマークアップを担当し、ユーザが最も知りたい情報は何か、どういったシチュエーションで使うのか、を考えながらデザインを行いました。このデザインでは「爽やか」というイメージを最も重要視し、それを元にテーマカラーや全体の雰囲気を決めていきました。背景は部屋干しでも外干しのようにカラッと洗濯物を干している感覚になれば良いなと思い、青空に太陽が上がっているような画像をPhotoshopで作りました。乾燥度や乾燥にかかる時間といった重要な情報は色や大きさを変えて視認性を上げつつ、区切りを水面のようなデザインにして世界観を損なわないようにすることで爽やかさを保ったままUIとしての機能を持たせました。<br>
+                        　このハッカソンにおいて私達のチームはAward Day進出チームとして表彰されることが決まりました！ハードウェア2人、ソフトウェア2人、デザイン1人といったチーム構成で、各々が自分の得意分野を活かし楽しみながら開発することができ、良い経験になりました。
+                    </p>
+                    <a class="modal-close">
+                    ×
+                </a>
+                </div>
+            </div>
+            <div id="modal2", class="modal-content">
+                <img src="./images/YT_logo250.jpg" style="margin-top: 12vh;", >
+                <div class="modal-text">
+                    <h2>
+                        自分のロゴ
+                    </h2>
+                    <p>
+                        　今回のポートフォリオサイトをつくるにあたって、自分のロゴをデザインしました。自分のイニシャルであるYとTを型取り、小さい頃から大好きなトマトと実家で飼っている文鳥をイメージしています。ロゴと私の印象を一致させて自分がどんな人間なのか一目でわかるように、好きなものを詰め合わせてデザインしました。また、ポートフォリオサイトを綺麗めにまとめたかったため、雰囲気が合うように大人っぽい見た目にしました。
+                    </p>
+                    <a class="modal-close">
+                        ×
+                    </a>
+                </div>
+            </div>
+            <div id="modal3", class="modal-content">
+                <img src="./images/askul_sc250.jpg">
+                <div class="modal-text">
+                    <h2>
+                        アスクルインターンシップ
+                    </h2>
+                    <p>
+                        <span style="font-size: 12px;">※非公開の資料を元にして作ったため成果物をそのまま載せることはできなかったので、インターン中に書いた手書きのワイヤーフレームを掲載しています。</span><br><br>
+                        　2018年夏、アスクルエンジニアインターンシップ デザイナーコースに参加しました。与えられた課題はアスクルの運営しているECサイトLOHACOの出店ストア一覧ページのUI改修を行うといったもので、5日間という短い期間ではありましたがPhotoshopを使って画面設計を行いました。「自分のデザインを使ってもらうには周りを納得させないといけない、そのためにはデザインのすべての部分を理由をもって決定していくことが必要」というデザイナーの方のお話を聞き、一つひとつにこだわりを持って、綿密に決めていきました。実際にお客さんに使ってもらうようなサービスに関わるのは初めての経験で、とてもわくわくしながら制作を楽しむことができました。<br>
+                        　このインターンシップを通じて、デザイナーとはただ画面をつくるだけでなく、ターゲットとなるお客さんの背景やそのページにアクセスする目的、シチュエーションといった様々な要素を考慮して、「こういう機能があったら良いんじゃないか」といった構想を膨らませて形にすることで、より良いサービスをつくる仕事なのだと感じました。<br>
+                        　ここで得た経験は、自分がデザイナーを目指すきっかけになりました。
+                    </p>
+                    <a class="modal-close">
+                        ×
+                    </a>
+                </div>
+            </div>
         </table>
         <!-- ページ上部に戻るボタン -->
         <p id="pageTop">

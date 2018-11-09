@@ -295,12 +295,13 @@ html {
 }
 
 .thumbnail {
-    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 50px;
 }
 
-.jphacks-image {
-    padding-right: 40px;
+.thumbnail-image {
+    padding-right: 20px;
 }
 
 figure.hover-parent {
@@ -311,7 +312,7 @@ figure.hover-parent {
     margin: 0px;
     overflow: hidden;
     border: solid;
-    border-color: #bebebe;
+    border-color: #99e6e1;
     border-width: thin;
 }
 
@@ -330,7 +331,7 @@ figcaption.hover-mask {
     display: flex;
     align-items: center;
     text-align: center;
-    padding-left: 45px;
+    padding-left: 25px;
     opacity: 1;
     top: -100%;
     z-index: 2;
@@ -343,6 +344,79 @@ figcaption.hover-mask {
 figure:hover figcaption {
     top: 0;
     left: 0;
+}
+
+.modal-overlay {
+    z-index: 2;
+    /*デモではheader,footerをz-index:1にしたので それより上げています*/
+    display: none;
+    /*jsでフェードインされるまでdisplay:none*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /*100vhでビューポートの高さいっぱいになります*/
+    background-color: rgba(0, 0, 0, .5)
+}
+
+a.modal-open:hover {
+    cursor: pointer
+}
+
+/*カーソルをポインタに*/
+
+.modal-content {
+    min-width: 65%;
+    min-height: 60%;
+    position: fixed;
+    display: none;
+    /*jsでフェードインされるまでdisplay:none*/
+    z-index: 3;
+    /*オーバーレイより上に*/
+    margin: 5vh;
+    padding: 15px;
+    border-radius: 20px;
+    background: #fff;
+    vertical-align: middle;
+    padding-left: 30px;
+}
+
+.modal-content img {
+    display: inline;
+    width: auto;
+    max-height: 75vh;
+    vertical-align: middle;
+    border: solid;
+    border-color: #99e6e1;
+    border-width: thin;
+    margin-top: 5vh;
+}
+
+.modal-text {
+    display: inline-block;
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-right: 10px;
+    width: 80vh;
+    vertical-align: middle;
+}
+
+a.modal-close {
+    /*クローズボタンは何でも好きなスタイルでOK*/
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #000;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a.modal-close:hover {
+    cursor: pointer;
+    opacity: 0.6;
 }
 
 .global-nav {
